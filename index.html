@@ -1,4 +1,213 @@
-<!-- HERO IMAGE -->
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Ítalo Ramos | Nutrição & Performance</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily:{
+sans:['Plus Jakarta Sans','sans-serif']
+},
+colors:{
+brand:{
+dark:'#050505',
+card:'#101010',
+primary:'#f59e0b'
+}
+}
+}
+}
+}
+</script>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+overflow-x:hidden;
+}
+
+.noise{
+position:fixed;
+inset:0;
+opacity:.03;
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+pointer-events:none;
+z-index:1;
+}
+
+.glow{
+position:absolute;
+width:550px;
+height:550px;
+border-radius:999px;
+background:rgba(245,158,11,.15);
+filter:blur(120px);
+pointer-events:none;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.stroke-text{
+-webkit-text-stroke:1px rgba(255,255,255,.12);
+color:transparent;
+}
+
+.card-blur{
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.03);
+}
+
+.gradient-border{
+position:relative;
+}
+
+.gradient-border::before{
+content:'';
+position:absolute;
+inset:0;
+padding:1px;
+border-radius:32px;
+background:linear-gradient(180deg,rgba(245,158,11,.5),rgba(255,255,255,.05));
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+pointer-events:none;
+}
+
+</style>
+
+</head>
+
+<body class="font-sans text-white">
+
+<div class="noise"></div>
+
+<!-- HERO -->
+
+<section class="relative min-h-screen flex items-center overflow-hidden">
+
+<div class="glow top-[-200px] left-[-150px]"></div>
+
+<div class="max-w-7xl mx-auto px-6 py-24 relative z-10">
+
+<div class="grid lg:grid-cols-[1.1fr_.9fr] gap-20 items-center">
+
+<!-- LEFT -->
+
+<div class="reveal">
+
+<div class="flex items-center gap-4 mb-10">
+
+<div class="w-16 h-[1px] bg-amber-400"></div>
+
+<span class="uppercase tracking-[0.35em] text-sm text-amber-300 font-semibold">
+Nutrição • Alta Performance
+</span>
+
+</div>
+
+<h1 class="text-6xl md:text-8xl font-black leading-[0.88] tracking-[-0.08em]">
+
+Transforme <br>
+
+seu físico <br>
+
+<span class="stroke-text">
+sem extremos.
+</span>
+
+</h1>
+
+<p class="text-zinc-400 text-xl leading-relaxed mt-10 max-w-2xl">
+Uma estratégia construída por quem vive transformação real. Nutrição aplicada para emagrecimento, performance e constância sem protocolos impossíveis.
+</p>
+
+<div class="flex flex-wrap gap-5 mt-12">
+
+<a
+href="https://api.whatsapp.com/send/?phone=5581987473588&text=Quero+saber+sobre+seu+acompanhamento&type=phone_number&app_absent=0"
+class="bg-amber-400 hover:bg-amber-300 transition-all duration-300 text-black px-10 py-5 rounded-2xl font-black text-lg shadow-[0_20px_60px_rgba(245,158,11,.35)]"
+>
+QUERO MEU ACOMPANHAMENTO
+</a>
+
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16">
+
+<div class="card-blur border border-white/10 rounded-3xl p-6">
+<h3 class="text-4xl font-black">20k+</h3>
+<p class="text-zinc-500 uppercase tracking-widest text-xs mt-3">
+seguidores
+</p>
+</div>
+
+<div class="card-blur border border-white/10 rounded-3xl p-6">
+<h3 class="text-4xl font-black">2x</h3>
+<p class="text-zinc-500 uppercase tracking-widest text-xs mt-3">
+1º lugar 24h
+</p>
+</div>
+
+<div class="card-blur border border-white/10 rounded-3xl p-6">
+<h3 class="text-4xl font-black">Ultra</h3>
+<p class="text-zinc-500 uppercase tracking-widest text-xs mt-3">
+maratonista
+</p>
+</div>
+
+<div class="card-blur border border-white/10 rounded-3xl p-6">
+<h3 class="text-4xl font-black">Real</h3>
+<p class="text-zinc-500 uppercase tracking-widest text-xs mt-3">
+transformação
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="relative flex justify-center reveal">
+
+<div class="absolute inset-0 flex items-center justify-center">
+
+<div class="w-[520px] h-[520px] rounded-full border border-amber-400/10"></div>
+
+<div class="absolute w-[420px] h-[420px] rounded-full border border-amber-400/10"></div>
+
+</div>
+
+<div class="absolute w-[350px] h-[350px] bg-amber-400/20 blur-[120px] rounded-full"></div>
 
 <img
 src="italo-ramos.jpg"
@@ -6,10 +215,236 @@ alt="Ítalo Ramos"
 class="relative z-10 rounded-[40px] border border-white/10 object-cover max-h-[780px] shadow-2xl"
 >
 
-<!-- ABOUT IMAGE -->
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="py-32 bg-[#080808] relative overflow-hidden">
+
+<div class="glow bottom-[-250px] right-[-100px]"></div>
+
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+
+<div class="reveal">
 
 <img
 src="italo-about.jpg"
 alt="Ítalo Ramos"
 class="rounded-[40px] border border-white/10 shadow-2xl"
 >
+
+</div>
+
+<div class="reveal">
+
+<span class="uppercase tracking-[0.35em] text-sm text-amber-300 font-semibold">
+A trajetória
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black tracking-[-0.06em] leading-[1] mt-8 mb-10">
+Transformação construída na prática.
+</h2>
+
+<div class="space-y-7 text-zinc-400 text-lg leading-relaxed">
+
+<p>
+Ítalo Ramos construiu sua trajetória unindo nutrição, performance e mudança de estilo de vida através da própria experiência.
+</p>
+
+<p>
+Ex-obeso e ultramaratonista, sua comunicação transmite intensidade, disciplina e uma visão prática sobre transformação física sustentável.
+</p>
+
+<p>
+Sua abordagem é voltada para pessoas que desejam emagrecer, melhorar performance e recuperar saúde sem viver em extremos ou protocolos impossíveis.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MÉTODO -->
+
+<section class="py-32 bg-black">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center max-w-4xl mx-auto reveal">
+
+<span class="uppercase tracking-[0.35em] text-sm text-amber-300 font-semibold">
+O acompanhamento
+</span>
+
+<h2 class="text-5xl md:text-7xl font-black tracking-[-0.06em] leading-[0.95] mt-8">
+Uma estratégia criada para funcionar na vida real.
+</h2>
+
+</div>
+
+<div class="grid lg:grid-cols-3 gap-8 mt-24">
+
+<div class="gradient-border rounded-[36px] reveal">
+
+<div class="bg-[#0f0f0f] rounded-[36px] p-10 h-full">
+
+<div class="w-16 h-16 rounded-2xl bg-amber-400/10 flex items-center justify-center mb-8">
+<i data-lucide="flame" class="w-8 h-8 text-amber-300"></i>
+</div>
+
+<h3 class="text-3xl font-black mb-6">
+Emagrecimento Inteligente
+</h3>
+
+<p class="text-zinc-500 leading-relaxed text-lg">
+Estratégias sustentáveis para reduzir gordura sem dietas impossíveis ou terrorismo nutricional.
+</p>
+
+</div>
+
+</div>
+
+<div class="gradient-border rounded-[36px] reveal">
+
+<div class="bg-[#0f0f0f] rounded-[36px] p-10 h-full">
+
+<div class="w-16 h-16 rounded-2xl bg-amber-400/10 flex items-center justify-center mb-8">
+<i data-lucide="mountain" class="w-8 h-8 text-amber-300"></i>
+</div>
+
+<h3 class="text-3xl font-black mb-6">
+Alta Performance
+</h3>
+
+<p class="text-zinc-500 leading-relaxed text-lg">
+Nutrição aplicada para melhorar energia, rendimento e resistência física.
+</p>
+
+</div>
+
+</div>
+
+<div class="gradient-border rounded-[36px] reveal">
+
+<div class="bg-[#0f0f0f] rounded-[36px] p-10 h-full">
+
+<div class="w-16 h-16 rounded-2xl bg-amber-400/10 flex items-center justify-center mb-8">
+<i data-lucide="shield-check" class="w-8 h-8 text-amber-300"></i>
+</div>
+
+<h3 class="text-3xl font-black mb-6">
+Constância Real
+</h3>
+
+<p class="text-zinc-500 leading-relaxed text-lg">
+Uma abordagem prática e sustentável para encaixar na sua rotina e gerar resultados duradouros.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="py-40 bg-gradient-to-b from-amber-400 to-orange-500 relative overflow-hidden">
+
+<div class="absolute inset-0 bg-black/10"></div>
+
+<div class="max-w-5xl mx-auto px-6 text-center relative z-10 reveal">
+
+<p class="uppercase tracking-[0.35em] text-sm font-bold text-black/70 mb-10">
+Mentalidade • Disciplina • Performance
+</p>
+
+<h2 class="text-5xl md:text-7xl font-black text-black tracking-[-0.06em] leading-[0.95]">
+Seu corpo muda quando sua rotina muda.
+</h2>
+
+<p class="text-black/70 text-xl leading-relaxed mt-10 max-w-3xl mx-auto">
+Transformação sustentável acontece através de estratégia, constância e direção.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="py-32 bg-black relative overflow-hidden">
+
+<div class="glow bottom-[-200px] left-[-100px]"></div>
+
+<div class="max-w-5xl mx-auto px-6 text-center relative z-10 reveal">
+
+<span class="uppercase tracking-[0.35em] text-sm text-amber-300 font-semibold">
+Consultoria personalizada
+</span>
+
+<h2 class="text-5xl md:text-7xl font-black tracking-[-0.06em] leading-[0.95] mt-8">
+Comece sua transformação agora.
+</h2>
+
+<p class="text-zinc-400 text-xl leading-relaxed mt-10 max-w-3xl mx-auto">
+Clique no botão abaixo e fale diretamente com Ítalo Ramos para conhecer o acompanhamento nutricional.
+</p>
+
+<a
+href="https://api.whatsapp.com/send/?phone=5581987473588&text=Quero+saber+sobre+seu+acompanhamento&type=phone_number&app_absent=0"
+class="inline-flex mt-14 bg-white text-black px-12 py-6 rounded-2xl font-black text-lg hover:bg-zinc-200 transition-all"
+>
+QUERO FALAR COM O ÍTALO
+</a>
+
+</div>
+
+</section>
+
+<script>
+
+lucide.createIcons();
+
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach((element)=>{
+
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+element.classList.add('active');
+}
+
+});
+
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+revealOnScroll();
+
+</script>
+
+</body>
+</html>
+```
